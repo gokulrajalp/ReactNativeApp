@@ -23,16 +23,16 @@ export default function Gallerypermission() {
 		requestPermission();
 	}, []);
 
-	const getImage = async () => {
-		try {
-			const result = await ImagePicker.launchImageLibraryAsync();
-			if (!result.canceled) {
-				setImage(result.assets[0].uri);
-			}
-		} catch (error) {
-			console.log('Error on get Image', error);
-		}
-	};
+	// const getImage = async () => {
+	// 	try {
+	// 		const result = await ImagePicker.launchImageLibraryAsync();
+	// 		if (!result.canceled) {
+	// 			setImage(result.assets[0].uri);
+	// 		}
+	// 	} catch (error) {
+	// 		console.log('Error on get Image', error);
+	// 	}
+	// };
 
 	return (
 		<View style={styles.container}>

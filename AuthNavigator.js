@@ -10,6 +10,7 @@ import Loading from './Components/Loading';
 import Scroll from './Components/Scroll';
 import ApiFetch from './Components/ApiFetch';
 import Gallerypermission from './Components/Permission/Gallerypermission';
+import Gallery from './Components/Permission/Gallery';
 
 export default function AuthNavigator() {
 	const Stack = createNativeStackNavigator();
@@ -26,6 +27,7 @@ export default function AuthNavigator() {
 			<Stack.Screen name="Loading" component={Loading} />
 			<Stack.Screen name="APIFetch" component={ApiFetch} />
 			<Stack.Screen name="Gallery" component={Gallerypermission} />
+			<Stack.Screen name="GalleryImg" component={Gallery} />
 		</Stack.Navigator>
 	);
 }

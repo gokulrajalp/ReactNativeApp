@@ -9,13 +9,13 @@ import {
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import * as ImagePicker from 'expo-image-picker';
 
-export default function ImageInput({ image, setImage }) {
+export default function ImageInput({ images, setImages }) {
 	const handlePress = () => {
-		if (!image) {
+		if (!images) {
 			getImage();
 		} else {
 			Alert.alert('Delete', 'Are you sure delete!', [
-				{ text: 'Yes', onPress: () => setImage(null) },
+				{ text: 'Yes', onPress: () => setImages(null) },
 				{ text: 'No' },
 			]);
 		}
@@ -28,7 +28,7 @@ export default function ImageInput({ image, setImage }) {
 				quality: 0.5,
 			});
 			if (!result.canceled) {
-				// setImage(result.assets[0].uri);
+				setImages(result.assets[0].uri);
 			}
 		} catch (error) {
 			console.log('Error on get Image', error);
@@ -38,10 +38,10 @@ export default function ImageInput({ image, setImage }) {
 	return (
 		<TouchableWithoutFeedback onPress={handlePress}>
 			<View style={styles.container}>
-				{!image && (
+				{!images && (
 					<MaterialCommunityIcons name="camera" size={40} color="red" />
 				)}
-				{image && <Image source={{ uri: image }} style={styles.Image} />}
+				{images && <Image source={{ uri: images }} style={styles.Image} />}
 			</View>
 		</TouchableWithoutFeedback>
 	);

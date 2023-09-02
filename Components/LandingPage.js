@@ -50,6 +50,13 @@ export default function LandingPage({ navigation }) {
 				<Text style={tw`text-white font-bold`}>Gallery</Text>
 			</TouchableOpacity>
 
+			<TouchableOpacity
+				style={[tw`bg-blue-500 m-4 p-2 px-5 rounded`]}
+				onPress={() => navigation.navigate('GalleryImg')}
+			>
+				<Text style={tw`text-white font-bold`}>Gallery Images</Text>
+			</TouchableOpacity>
+
 			<StatusBar style="auto" />
 		</View>
 	);

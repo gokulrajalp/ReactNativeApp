@@ -1,4 +1,4 @@
-// Display with use of ScrollView
+my// Display with use of ScrollView
 
 import React from 'react';
 import List from './List';
@@ -7,6 +7,7 @@ import tw from 'tailwind-react-native-classnames';
 
 function Scroll(props) {
 	return (
+		// this will make a screen scroll to show all content 
 		<ScrollView>
 			{List.map((item, i) => (
 				<Text style={[tw`p-5`]} key={i}>

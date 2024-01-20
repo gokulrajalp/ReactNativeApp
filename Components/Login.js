@@ -13,6 +13,7 @@ const ValidationSchema = Yup.object().shape({
 export default function Login({ navigation }) {
 	return (
 		<View style={[tw`flex-1 justify-center items-center `]}>
+		//app form to submit and do submit action
 			<AppForm
 				initialValues={{ Username: '', Password: '' }}
 				onSubmit={(values) =>

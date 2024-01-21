@@ -16,6 +16,7 @@ export default function AuthNavigator() {
 	const Stack = createNativeStackNavigator();
 
 	return (
+		//App screens
 		<Stack.Navigator initialRouteName="LandingPage">
 			<Stack.Screen name="LandingPage" component={LandingPage} />
 			<Stack.Screen name="Login" component={Login} />
